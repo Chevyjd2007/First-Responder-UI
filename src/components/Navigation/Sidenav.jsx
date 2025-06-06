@@ -15,7 +15,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import {useNavigate } from 'react-router-dom';
 import { useAppStore } from '../../appStore';
-import { TbHome , TbDeviceDesktop, TbFriends ,  TbNews } from "react-icons/tb";
+import { TbHome , TbDeviceDesktop, TbFriends ,  TbNews, TbSettings } from "react-icons/tb";
 
 
 
@@ -108,7 +108,7 @@ export default function Sidenav() {
                             mr: open ? 3 : "auto",
                             justifyContent: "center",
                         }}>
-                            <TbDeviceDesktop size={28}/>
+                            <TbDeviceDesktop color='#2e2d2d' size={28}/>
                         </ListItemIcon>
                         <ListItemText style={{fontFamily: 'var(--secondary-font)'}} primary="Home" sx={{ opacity: open ? 1 : 0}} />
                 </ListItemButton>
@@ -127,7 +127,7 @@ export default function Sidenav() {
                             mr: open ? 3 : "auto",
                             justifyContent: "center",
                         }}>
-                            <TbHome size={28}/>
+                            <TbHome color='#2e2d2d' size={28}/>
                         </ListItemIcon>
                         <ListItemText style={{fontFamily: 'var(--secondary-font)'}} primary="The Project" sx={{ opacity: open ? 1 : 0}} />
                 </ListItemButton>
@@ -146,7 +146,7 @@ export default function Sidenav() {
                             mr: open ? 3 : "auto",
                             justifyContent: "center",
                         }}>
-                            <TbFriends size={28}/>
+                            <TbFriends color='#2e2d2d' size={28}/>
                         </ListItemIcon>
                         <ListItemText style={{fontFamily: 'var(--secondary-font)'}} primary="The Team" sx={{ opacity: open ? 1 : 0}} />
                 </ListItemButton>
@@ -165,9 +165,28 @@ export default function Sidenav() {
                             mr: open ? 3 : "auto",
                             justifyContent: "center",
                         }}>
-                            <TbNews size={28}/>
+                            <TbNews color='#2e2d2d' size={28}/>
                         </ListItemIcon>
                         <ListItemText style={{fontFamily: 'var(--secondary-font)'}} primary="What's next" sx={{ opacity: open ? 1 : 0}} />
+                </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding sx={{ display: "block"}} onClick={() => {navigate("/settings")}}>
+                <ListItemButton
+                sx={{
+                    minHeight: 48,
+                    justifyContent: open ? "initial" : "center",
+                    px: 2.5
+                }}
+                >
+                    <ListItemIcon 
+                        sx={{
+                            minWidth: 0,
+                            mr: open ? 3 : "auto",
+                            justifyContent: "center",
+                        }}>
+                            <TbSettings color='#2e2d2d' size={28}/>
+                        </ListItemIcon>
+                        <ListItemText style={{fontFamily: 'var(--secondary-font)'}} primary="Settings" sx={{ opacity: open ? 1 : 0}} />
                 </ListItemButton>
             </ListItem>
         </List>

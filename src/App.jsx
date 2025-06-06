@@ -6,6 +6,7 @@ import Project from './Pages/Project';
 import Team from './Pages/Team';
 import Updates from './Pages/Updates';
 import './styles/App.css'
+import Settings from './Pages/Settings';
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/project" exact element={<Project />}></Route>
           <Route path="/team" exact element={<Team />}></Route>
           <Route path="/updates" exact element={<Updates />}></Route>
+          <Route path="/settings" exact element={<Settings />}></Route>
         </Routes>
       </BrowserRouter>
     </>

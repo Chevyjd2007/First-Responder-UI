@@ -9,6 +9,8 @@ import CardContent from '@mui/material/CardContent';
 import Stack from '@mui/material/Stack';
 import "../styles/Dashboard.css";
 import { TbAlertOctagonFilled, TbInnerShadowTopRight, TbRobotOff, TbDeviceHeartMonitorFilled} from "react-icons/tb";
+import CountUp from 'react-countup';
+import Skeleton from '@mui/material/Skeleton';
 
 
 
@@ -30,7 +32,7 @@ const Home = () => {
                       <TbAlertOctagonFilled size={32}/>
                     </div>
                     <Typography gutterBottom variant="h5" component="div" color='aliceblue' fontWeight={500} fontSize={25} >
-                      107
+                      <CountUp end={107} duration={1.5} />
                     </Typography>
                     <Typography gutterBottom variant="body2" component="div"
                       color='aliceblue' fontSize={20}>
@@ -44,7 +46,7 @@ const Home = () => {
                       <TbInnerShadowTopRight size={32}/>
                     </div>
                     <Typography gutterBottom variant="h5" component="div" color='aliceblue' fontWeight={500} fontSize={25}>
-                      372
+                      <CountUp end={372} duration={1.5} />
                     </Typography>
                     <Typography gutterBottom variant="body2" component="div"
                      color='aliceblue' fontSize={20}>
@@ -62,7 +64,9 @@ const Home = () => {
                           <TbDeviceHeartMonitorFilled size={30} /> 
                         </div>
                         <div className='metric__container'>
-                          <span className='metric__title' style={{color: 'aliceblue'}}>893</span>
+                          <span className='metric__title' style={{color: 'aliceblue'}}>
+                            <CountUp end={893} duration={1.5} />
+                          </span>
                             <br/>
                           <span className='metric__subtitle' style={{color: 'aliceblue'}}>Alerts Handled by First Responder</span>
                         </div>
@@ -74,7 +78,9 @@ const Home = () => {
                           <TbRobotOff size={30} />
                         </div>
                         <div className='metric__container'>
-                          <span className='metric__title'>32</span>
+                          <span className='metric__title'>
+                            <CountUp end={32} duration={1.5} />
+                          </span>
                             <br/>
                           <span className='metric__subtitle'>Alerts Handled by Staff</span>
                         </div>
@@ -86,7 +92,7 @@ const Home = () => {
         <Box height={20} />
         <Grid container spacing={2}>
             <Grid size={8} width={"100%"}>
-              <Card sx={{ height: "70vh"}}>
+              <Card sx={{ height: "75vh"}}>
                     <CardContent></CardContent>
               </Card> 
             </Grid>
