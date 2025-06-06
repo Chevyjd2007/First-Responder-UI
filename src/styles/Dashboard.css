@@ -1,0 +1,26 @@
+.metric__container{
+  padding: 10px 10px 10px 10px;
+}
+
+.metric__title {
+  font-weight: 600;
+}
+
+.metric__subtitle {
+  font-weight: 14px;
+}
+
+.gradient__dark {
+  background: rgb(40, 34, 70) !important;
+  background: linear-gradient(128deg, #f1598c 0%,  #720303 100%) !important;
+}
+
+.gradient__light {
+  background: rgb(53, 34, 70) !important;
+  background: linear-gradient(128deg, #9bd46a 10%, #2fa966 100%) !important;
+}
+
+.bg__color {
+  min-height: 100vh !important;
+  background-color: #e0e4e7 !important;
+}
